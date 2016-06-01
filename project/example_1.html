@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Learn jQuery</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+            <!-- -->
+            <style>
+                .red{color:red;};
+                .green{color:green;};
+                .blue{color:blue;};
+            </style>
+
+            <!-- Event Handlers -->
+            <script>
+                $(document).ready(function(){
+                    // Target all 'h1'
+                    // $('h1').addClass('red');
+
+                    // Target 'myLink' class
+                    // $('.myLink');
+
+                    // Alert when clicking '.myLink'
+                    //$('.myLink').on('click', function(){
+                    //    alert('You clicked');
+                    //});
+
+                    // Change color of 'h1' when clicking '.myLink'
+                    //$('.myLink').on('click', function(){
+                    //    $('h1').addClass('red');
+                    //});
+
+                  //Fadeout
+                    // Fadeout 'h1' when clicking '.myLink'
+                    $('.myFadeoutLink').on('click', function(){
+                        $('h1').fadeToggle(500);
+                    });
+
+                    //Slide
+                      // Slide 'h2' when clicking '.myLink'
+                      $('.mySlideLink').on('click', function(){
+                          $('h2').slideToggle(500);
+                      });
+
+                    //Slide & Mouseenter
+                      // Slide 'h3' when mouse goes over '.myLink'
+                      $('.mySlideMouseenterLink').on('mouseenter', function(){
+                          $('h3').slideUp(500);
+                      });
+
+                      // Slide 'h3' when mouse goes over '.myLink'
+                      $('.mySlideMouseenterLink').on('mouseleave', function(){
+                          $('h3').slideDown(500);
+                      });
+
+                    //AddClass & Mouseenter
+                      // Slide 'h4' when mouse goes over '.myLink'
+                      $('.myAddMouseLink').on('mouseenter', function(){
+                          $('h4').addClass('red');
+                      });
+
+                      // Slide 'h4' when mouse goes over '.myLink'
+                      $('.myAddMouseLink').on('mouseleave', function(){
+                          $('h4').removeClass('red');
+                      });
+
+                    //Text
+                      // Change 'h5' when mouse goes over '.myLink'
+                      $('.myChangeLink').click('mouseenter', function(){
+                          $('h5').text('Hello World');
+                      });
+
+                    //Text
+                      // Change 'h5' when mouse goes over '.myLink'
+                      $('.myChangeSizeLink').click('mouseenter', function(){
+                          // $('h5').html('Hello World');
+                          $('h6').replaceWith('<h1>Hello World</h1>');
+                      });
+                });
+            </script>
+        </head>
+
+        <body>
+            <h1>Fadeout</h1>
+            <a href="#" class="myFadeoutLink">Click Aqui</a>
+
+            <h2>Slide</h2>
+            <a href="#" class="mySlideLink">Click Aqui</a>
+
+            <h3>Slide and Mouse</h3>
+            <a href="#" class="mySlideMouseenterLink">Click Aqui</a>
+
+            <h4>Addclass and Mouse</h4>
+            <a href="#" class="myAddMouseLink">Click Aqui</a>
+
+            <h5>Cambiar Texto</h5>
+            <a href="#" class="myChangeLink">Click Aqui</a>
+
+            <h6>Cambiar Texto de Tamaño</h6>
+            <a href="#" class="myChangeSizeLink">Click Aqui</a>
+        </body>
+    </html>
